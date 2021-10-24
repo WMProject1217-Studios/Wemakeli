@@ -1,0 +1,1 @@
+chrome-extension://ehghflkihjkheappgfdekjemoebdfjhb/js/detector.js

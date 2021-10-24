@@ -1,0 +1,78 @@
+<div id="timeblock"></div>
+<script>
+var timerd = 0;
+var timerda = 0;
+var timerdb = 0;
+var timerdc = 0;
+var timerdd = 0;
+var strout = "";
+setInterval(
+function()
+{
+timerd = timerd + 1;
+if (timerd >= 60) {
+    //秒 -> 分
+    timerda = timerda + 1;
+    timerd = 0;
+    if (timerda >= 60) {
+        //分 -> 时
+        timerdb = timerdb + 1;
+        timerda = 0;
+        if (timerdb >= 24) {
+            //时 -> 天
+            timerdc = timerdc + 1;
+            timerdb = 0;
+        }
+    }
+}
+if (timerdc > 0) {
+    strout = timerdc + " 天 " + timerdb + " 时 " + timerda + " 分 " + timerd + " 秒 ";
+} else if (timerdb > 0) {
+    strout = timerdb + " 时 " + timerda + " 分 " + timerd + " 秒 ";
+} else if (timerda > 0) {
+    strout = timerda + " 分 " + timerd + " 秒 ";
+} else {
+    strout = timerd + " 秒 ";
+}
+document.getElementById("timeblock").innerHTML = strout;
+},1000);
+</script>
+<div id="timeblocksc"></div>
+<script>
+var sctimerd = 0;
+var sctimerda = 0;
+var sctimerdb = 0;
+var sctimerdc = 0;
+var sctimerdd = 0;
+var scstrout = "";
+setInterval(
+function()
+{
+sctimerd = sctimerd + 1;
+if (sctimerd >= 31) {
+    //秒 -> 分
+    sctimerda = sctimerda + 1;
+    sctimerd = 0;
+    if (sctimerda >= 255) {
+        //分 -> 时
+        sctimerdb = sctimerdb + 1;
+        sctimerda = 0;
+        if (sctimerdb >= 63) {
+            //时 -> 天
+            sctimerdc = sctimerdc + 1;
+            sctimerdb = 0;
+        }
+    }
+}
+if (sctimerdc > 0) {
+    scstrout = sctimerdc + " 天 " + sctimerdb + " 时 " + sctimerda + " 分 " + sctimerd + " 秒 ";
+} else if (sctimerdb > 0) {
+    scstrout = sctimerdb + " 时 " + sctimerda + " 分 " + sctimerd + " 秒 ";
+} else if (sctimerda > 0) {
+    scstrout = sctimerda + " 分 " + sctimerd + " 秒 ";
+} else {
+    scstrout = sctimerd + " 秒 ";
+}
+document.getElementById("timeblocksc").innerHTML = "[SC] " + scstrout;
+},1024);
+</script>

@@ -1,0 +1,6 @@
+echor <style>echo {background-color:#EEEE00;color:#66CCFF;font-size:24px;}</style>
+echo <echo>Ciallo,World!</echo>
+msgbox Ciallo,World!
+inputbox LBWNB^,^fff
+inputbox null
+##Ciallo～(∠ · ω< )⌒☆

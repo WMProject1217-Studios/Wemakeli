@@ -1,0 +1,9 @@
+
+User-agent: *
+Disallow: /account/
+Disallow: /api/
+Disallow: /assets/
+Disallow: /error/
+Disallow: /explorer/
+Disallow: /library/
+Disallow: /temp/

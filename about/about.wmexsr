@@ -1,0 +1,33 @@
+﻿Build on Wemakeli Danmaku Video Website System [Version 0.8.9 Build 1537]
+By WMProject1217
+<a href='https://github.com/wmproject1217/wemakeli' target='_blank'>当前项目的Github地址</a>
+
+使用了以下Github项目的一部分或全部
+Used a part or all of these Github projects.
+
+<a href='https://github.com/stevenjoezhang/live2d-widget' target='_blank'>https://github.com/stevenjoezhang/live2d-widget</a>
+<a href='https://github.com/chiruom/DanmuPlayer' target='_blank'>https://github.com/chiruom/DanmuPlayer</a>
+<a href='https://github.com/DIYgod/APlayer' target='_blank'>https://github.com/DIYgod/APlayer</a>
+<a href='https://github.com/alexantr/filemanager' target='_blank'>https://github.com/alexantr/filemanager</a>
+<a href='https://github.com/jabbany/ABPlayerHTML5' target='_blank'>https://github.com/jabbany/ABPlayerHTML5</a>
+Wemakeli 是基于PHP的弹幕视频网站工程,此工程的副本授权所有非商业永久使用
+Wemakeli is a danmaku video website project build with php, the copy of this project authorize all non-commercial permanent use.
+
+用户界面由WMUI驱动
+User Interface powered by WMUI
+
+/*没地方放了先放这里
+            <!pre style='font-size:14px;'>
+            本服务条款系 Wemakeli 与所有使用 Wemakeli 所提供服务的主体 (下称用户) 针对 Wemakeli 的使用订立的有效合约。在使用 Wemakeli 提供的一切服务前，请务必仔细阅读并理解透彻本声明。用户选择使用 Wemakeli 即表示完全认可此协议及其可能随时更新的内容
+            Wemakeli 保留随时修改服务条款的权利，用户在使用 Wemakeli 提供的服务时，有必要对最新的服务条款进行仔细阅读和重新确认，当发生有关争议时，以最新的服务条款为准
+            Wemakeli 随时可能调整向用户提供的服务内容或 Wemakeli 终止向用户提供服务并不另行通知。
+            一切开发旨在学习，请勿用于非法用途
+            Wemakeli 是完全免费且开放源代码的软件，仅供学习和娱乐用途使用
+            Wemakeli 不会通过任何方式强制收取费用，或对使用者提出物质条件
+            不鼓励，不支持一切商业使用
+            鉴于项目的特殊性，开发团队可能在任何时间停止更新或删除项目。
+            在未经过允许的情况下，任何人都不可以使用 Wemakeli 内 WMProject1217 发布的的有关 Wemakeli 来历的介绍原文，用于商业用途或是放置在项目首页，或其他未许可的行为。
+            若引用 Wemakeli 发布的软件包而不修改 Wemakeli，则衍生项目需在描述的任意部位提及使用 Wemakeli。
+            若修改 Wemakeli 源代码再发布，或参考 Wemakeli 内部实现发布另一个项目，则衍生项目必须在文章首部或 'Wemakeli' 相关内容首次出现的位置明确声明来源。不得扭曲或隐藏免费且开源的事实。
+            </pre>
+*/

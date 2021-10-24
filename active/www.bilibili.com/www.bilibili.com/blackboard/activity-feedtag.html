@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="spm_prefix" content="888.2869">
+    <script type="text/javascript">
+        var msource;
+        try {
+            var u = new URL(location.href);
+            var sp = u.searchParams;
+            msource = sp.get('msource') || sp.get('from') || sp.get('source_from') || sp.get('from_module')
+        } catch (e) {
+            console.warn('get page source from query failed', e)
+        }
+        window.activity = {
+            id: 11135,
+            spmId: '888.2869'
+        };
+        window.reportMsgObj = {};
+        window.reportConfig = {
+            sample: 1,
+            scrollTracker: true,
+            msgObjects: 'reportMsgObj',
+            pvMsg: {
+                msource: msource
+            },
+            errorTracker: true
+        };
+        // 模块的点击上报
+        document.addEventListener("click", function(e) {
+            if (!e.path && !e.composedPath) return;
+            var patharr = e.path ? e.path : e.composedPath();
+            if (patharr.length > 0) {
+                for (var i = 0; i < patharr.length; i++) {
+                    var node = patharr[i];
+                    if (
+                        node &&
+                        node.className &&
+                        node.dataset.module
+                    ) {
+                        var k = "BiliActModuleClick?" + node.id + "?" + node.dataset.module
+                        if (node.dataset.version) {
+                            k = k + "?" + node.dataset.version;
+                        }
+                        var value = 1;
+                        try {
+                            window.reportMsgObj &&
+                                window.reportObserver &&
+                                ((window.reportMsgObj[k] = value),
+                                    window.reportObserver.forceCommit &&
+                                    window.reportObserver.forceCommit());
+                        } catch (error) {
+                            console.error("[logger]", error);
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    <script src="//s1.hdslb.com/bfs/seed/log/report/log-reporter.js"></script>
+
+    <title>动态</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            padding: 0 10px;
+        }
+
+        .feed-tag .separater-line {
+            padding-left: 16px;
+        }
+
+        #act-preview-alert-mask {
+            display: none;
+        }
+
+        @media screen and (max-height: 820px) {
+            div.specification[data-v-49a162a9] {
+                height: 400px;
+            }
+        }
+
+        @media screen and (max-height: 620px) {
+            div.specification[data-v-49a162a9] {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script src="//activity.hdslb.com/blackboard/js/vue.min.js" crossorigin="anonymous"></script>
+    <script src="//activity.hdslb.com/blackboard/js/feedtag-1.5.8.js" crossorigin="anonymous"></script>
+    <script>
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+        var uid = getUrlParameter('uid');
+        var topic = getUrlParameter('topic');
+        window.BiliActFeedTagShow(document.getElementById('app'), {
+            loginUid: uid || 0,
+            topicName: topic
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<!--原网页来自lxns.org-->
+<head>
+    <title>WMProject1217 Studios</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta name="description" content="欢迎来到WMProject1217 Studios的官方网站。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML5, WMProject1217" />
+    <meta name="theme-color" content="#0078D7" />
+    <!--meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /-->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1" />
+    <link href="alternateURL" rel="alternate" hreflang="zh-Hans">
+    <link href="src/img/favicon.ico" mce_href="favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <link href="src/img/favicon.ico" mce_href="favicon.ico" type="image/x-icon" rel="bookmark">
+    <link href="src/img/favicon.ico" mce_href="favicon.ico" type="image/x-icon" rel="icon">
+    <script src="src/js/jquery-3.2.1.min.js" type="5791e6906e28f526dae007cc-text/javascript"></script>
+    <script src="src/js/jquery.nicescroll.js" type="5791e6906e28f526dae007cc-text/javascript"></script>
+    <script src="spine/spine-webgl.min.js" type="5791e6906e28f526dae007cc-text/javascript"></script>
+
+    <style>
+        :root {
+            // --main: rgb(231,27,100);
+            --main: dodgerblue;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #main {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        #background-contain {
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #background {
+            background-image: url(src/img/background-3.jpg);
+            opacity: 0;
+            background-position: center;
+            background-size: cover !important;
+            height: 104%;
+            width: 104%;
+            margin: -1% -2%;
+            display: block;
+        }
+
+        #background-cover {
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            background: rgba(0, 0, 0, .5);
+            background: radial-gradient(#00000080, transparent);
+        }
+
+        #body-1 {
+            position: absolute;
+            color: white;
+            height: 100px;
+            width: 440px;
+            left: calc(50% - 220px);
+            top: calc(50% - 50px);
+            text-shadow: 0 1px 3px white;
+            cursor: default;
+        }
+
+        #body-1>h1 {
+            line-height: 64px;
+            margin: 0;
+            height: 64px;
+            font-size: 64px;
+            font-weight: normal;
+        }
+
+        #body-1>h3 {
+            margin: 0;
+            position: relative;
+            float: right;
+            height: 32px;
+            font-size: 32px;
+            line-height: 32px;
+            font-weight: normal;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            color: white;
+            width: 100%;
+            text-align: right;
+            border-radius: 100% 0 0 0;
+            background: rgba(255, 255, 255, 0.46);
+            height: 90px;
+        }
+
+        footer>p {
+            position: absolute;
+            display: block;
+            text-shadow: 0 0 1px #000;
+            width: 60%;
+            top: 20px;
+            right: 60px;
+            font-size: 18px;
+            z-index: 1;
+        }
+
+        footer>p>a {
+            text-shadow: none;
+            text-decoration: none;
+            color: var(--main, rgb(231, 27, 100));
+        }
+
+        footer>p>a:hover {
+            text-decoration: underline;
+        }
+
+        #footer-down {
+            position: relative;
+            top: 35px;
+            right: 15px;
+            z-index: 3;
+        }
+
+        #footer-down>svg {
+            cursor: pointer;
+            fill: white;
+        }
+
+        #footer-down-menu {
+            position: absolute;
+            color: black;
+            width: 128px;
+            right: 0;
+            bottom: 48px;
+            background: white;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+        }
+
+        #footer-down-menu>div {
+            position: relative;
+            cursor: pointer;
+            padding: 8px;
+            height: 24px;
+            transition: all .3s;
+        }
+
+        #footer-down-menu>div:hover {
+            background: #EEE;
+        }
+
+        #footer-down-menu>div>svg {
+            position: relative;
+            float: left;
+        }
+
+        #footer-down-menu>div>p {
+            display: inline;
+            position: relative;
+        }
+
+        #body-2 {
+            position: relative;
+            top: 100%;
+            width: calc(100% - 100px);
+            padding: 100px 50px 50px 50px;
+            background: rgba(255, 255, 255, .9);
+            overflow-x: hidden;
+            border-bottom: 2px solid var(--main, rgb(231, 27, 100));
+        }
+
+        #body-3 {
+            position: relative;
+            top: 100%;
+            width: calc(100% - 100px);
+            padding: 50px;
+            background: url(assets/background.jpg);
+            overflow-x: hidden;
+            height: 500px;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #body-4 {
+            position: relative;
+            top: 100%;
+            width: calc(100% - 100px);
+            padding: 50px;
+            background: rgba(255, 255, 255, .9);
+            overflow-x: hidden;
+            border-top: 2px solid var(--main, rgb(231, 27, 100));
+        }
+
+        #body-2 h1,
+        #body-4 h1 {
+            font-weight: normal;
+            border-left: 4px solid var(--main, rgb(231, 27, 100));
+            padding-left: 15px;
+        }
+
+        #body-2 a,
+        #body-4 a {
+            color: var(--main, rgb(231, 27, 100));
+        }
+
+        #body-2 span,
+        #body-4 span {
+            color: var(--main, rgb(231, 27, 100));
+        }
+
+        #body-2 h3,
+        #body-4 h3 {
+            font-weight: normal;
+            font-size: 22px;
+            margin: 0;
+        }
+
+        #body-4-project>div {
+            display: inline-block;
+            margin-bottom: 16px;
+            width: 100%;
+        }
+
+        #body-4-project>div>div {
+            display: flow-root;
+        }
+
+        #body-4-project>div>img {
+            position: relative;
+            width: 128px;
+            margin-bottom: 15px;
+        }
+
+        .body-4-project-card {
+            width: calc(33.3% - 30px) !important;
+            float: left;
+            height: auto;
+            padding: 15px;
+            text-align: center;
+            transition: box-shadow .3s, background .3s, margin-top .3s, padding .3s, width .3s;
+            display: flow-root;
+            cursor: pointer;
+        }
+
+        .body-4-project-card>div>svg {
+            fill: var(--main, rgb(231, 27, 100));
+            position: relative;
+            bottom: 0;
+        }
+
+        .body-4-project-card-link {
+            display: none;
+        }
+
+        .body-4-project-card:hover {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            background: white;
+            margin-top: -5px;
+        }
+
+        .body-4-project-card.upgrade {
+            height: 300px;
+        }
+
+        #body-footer {
+            position: relative;
+            top: 100%;
+            width: calc(100% - 100px);
+            padding: 0 50px;
+            background: white;
+            overflow-x: hidden;
+            border-top: 2px solid var(--main, rgb(231, 27, 100));
+        }
+
+        #body-footer>p {
+            text-align: center;
+        }
+
+        #body-footer>p>a {
+            text-decoration: none;
+            color: var(--main, rgb(231, 27, 100));
+        }
+
+        #body-footer>p>a:hover {
+            text-decoration: underline;
+        }
+
+        @media (min-width: 500px) and (max-width: 1000px) {
+            .body-4-project-card {
+                width: 100% !important;
+                float: left;
+                height: auto;
+                padding: 0;
+                text-align: left;
+                margin-bottom: 16px;
+            }
+            .body-4-project-card>iv>svg {
+                right: 0;
+                float: right;
+            }
+            .body-4-project-card.upgrade {
+                height: auto;
+            }
+            .body-4-project-card:hover {
+                width: calc(100% - 30px) !important;
+                padding: 15px;
+            }
+            #body-4-project>div>img {
+                float: left;
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .body-4-project-card {
+                width: calc(100% - 30px) !important;
+                height: auto !important;
+            }
+            .body-4-project-card:hover {
+                margin-top: 0;
+            }
+        }
+
+        header {
+            position: absolute;
+            top: 100%;
+            z-index: 2;
+            width: 100%;
+            background: white;
+            border-bottom: 2px solid var(--main, rgb(231, 27, 100));
+        }
+
+        header>a {
+            text-decoration: none;
+            float: left;
+            color: gray;
+            height: 60px;
+            position: relative;
+            display: inline-block;
+            line-height: 60px;
+            font-size: 24px;
+            padding: 0 24px;
+            transition: all .3s;
+        }
+
+        header>a:hover {
+            background: #EEE;
+        }
+
+        header>a:active {
+            box-shadow: 0 3px 5px #CCC inset;
+        }
+
+        .developers>img {
+            float: left;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .developers>h3 {
+            font-weight: normal;
+            font-size: 28px !important;
+            margin: 0;
+        }
+
+        .developers>p {
+            margin: 10px 0 24px 0;
+        }
+
+        #canvas {
+            position: absolute;
+            width: 100%;
+            height: 200px;
+            bottom: 0;
+            left: 0;
+            opacity: .2;
+            image-rendering: pixelated;
+            z-index: 0;
+        }
+
+        .fade-in {
+            opacity: 0;
+        }
+
+        .come-in {
+            transform: translateX(150px);
+            animation: come-in 0.5s cubic-bezier(0, -0.01, 0, 0.99) forwards;
+        }
+
+        .come-in:nth-child(odd) {
+            animation-delay: 0.1s;
+            animation-duration: 0.75s;
+        }
+
+        .leave {
+            transform: translateX(150px);
+            animation: leave 0.5s cubic-bezier(0, -0.01, 0, 0.99) forwards;
+        }
+
+        .leave:nth-child(odd) {
+            animation-delay: 0.1s;
+            animation-duration: 0.75s;
+        }
+
+        .already-visible {
+            transform: translateY(0);
+            animation: none;
+            opacity: 1;
+        }
+
+        @keyframes come-in {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes leave {
+            to {
+                transform: translateX(-150);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="background-contain">
+        <div id="background"></div>
+    </div>
+    <div id="background-cover"></div>
+    <div id="main">
+        <div id="xcw">
+            <canvas id="xcw-canvas" width="0" height="0" style="position: absolute;width: 100%;height: 100%;opacity: 1;z-index: 1;" onclick="if (!window.__cfRLUnblockHandlers) return false; runAnimation('000000_dear_smile,000000_noWeapon_idle')" data-cf-modified-5791e6906e28f526dae007cc-=""></canvas>
+            <script type="5791e6906e28f526dae007cc-text/javascript">
+                var lastFrameTime = Date.now() / 1000;
+                var canvas;
+                var shader;
+                var batcher;
+                var gl;
+                var mvp = new spine.webgl.Matrix4();
+                var skeletonRenderer;
+                var debugRenderer;
+                var shapes;
+                window.skeleton = {};
+                var activeSkeleton = "";
+                var classMap;
+                var pendingAnimation = '';
+                var progressBar;
+                var animationQueue = [];
+                var speedFactor = 1;
+
+                function getClass(i) {
+                    return (i < 10 ? '0' : '') + i;
+                }
+
+                function loadData(url, cb, loadType, progress) {
+                    var xhr = new XMLHttpRequest;
+                    xhr.open('GET', url, true);
+                    if (loadType) xhr.responseType = loadType;
+                    if (progress) xhr.onprogress = progress;
+                    xhr.onload = function() {
+                        if (xhr.status == 200)
+                            cb(true, xhr.response);
+                        else
+                            cb(false);
+                    }
+                    xhr.onerror = function() {
+                        cb(false);
+                    }
+                    xhr.send();
+                }
+
+                function sliceCyspAnimation(buf) {
+                    var view = new DataView(buf),
+                        count = view.getInt32(12, true);
+                    return {
+                        count: count,
+                        data: buf.slice((count + 1) * 32)
+                    };
+                }
+
+                function init() {
+                    canvas = document.getElementById("xcw-canvas");
+                    var config = {
+                        alpha: true
+                    };
+                    gl = canvas.getContext("webgl", config) || canvas.getContext("experimental-webgl", config);
+                    if (!gl) {
+                        return;
+                    }
+                    shader = spine.webgl.Shader.newTwoColoredTextured(gl);
+                    batcher = new spine.webgl.PolygonBatcher(gl);
+                    mvp.ortho2d(0, 0, canvas.width - 1, canvas.height - 1);
+                    skeletonRenderer = new spine.webgl.SkeletonRenderer(gl);
+                    debugRenderer = new spine.webgl.SkeletonDebugRenderer(gl);
+                    debugRenderer.drawRegionAttachments = true;
+                    debugRenderer.drawBoundingBoxes = true;
+                    debugRenderer.drawMeshHull = true;
+                    debugRenderer.drawMeshTriangles = true;
+                    debugRenderer.drawPaths = true;
+                    debugShader = spine.webgl.Shader.newColored(gl);
+                    shapes = new spine.webgl.ShapeRenderer(gl);
+                }
+
+                var additionAnimations = ['DEAR', 'NO_WEAPON', 'POSING', 'RACE', 'RUN_JUMP', 'SMILE'];
+
+                var loading = false;
+                var loadingSkeleton;
+                var generalBattleSkeletonData = {};
+                var generalAdditionAnimations = {};
+                var currentTexture;
+                var currentClassAnimData = {
+                    type: 0,
+                    data: {}
+                };
+                var currentCharaAnimData = {
+                    id: 0,
+                    data: {}
+                };
+                var currentClass = '1';
+
+                function load(unit_id, class_id) {
+                    if (loading) return;
+                    loading = true;
+                    currentClass = class_id;
+                    var baseUnitId = unit_id | 0;
+                    baseUnitId -= baseUnitId % 100 - 1;
+                    loadingSkeleton = {
+                        id: unit_id | 0,
+                        info: {
+                            name: "キョウカ",
+                            type: "7",
+                            hasRarity6: false
+                        },
+                        baseId: '000000'
+                    };
+                    if (loadingSkeleton.info.hasSpecialBase) loadingSkeleton.baseId = 103601, currentClass = 103631;
+                    var baseId = loadingSkeleton.baseId;
+
+                    if (!generalBattleSkeletonData[baseId])
+                        loadData('spine/common/' + baseId + '_CHARA_BASE.cysp', function(success, data) {
+                            generalBattleSkeletonData[baseId] = data;
+                            loadAdditionAnimation();
+                        }, 'arraybuffer');
+                    else loadAdditionAnimation();
+                }
+                load(103631, 7);
+
+                function loadAdditionAnimation() {
+                    var doneCount = 0,
+                        abort = false;
+                    var baseId = loadingSkeleton.baseId;
+                    generalAdditionAnimations[baseId] = generalAdditionAnimations[baseId] || {};
+                    additionAnimations.forEach(function(i) {
+                        if (generalAdditionAnimations[baseId][i]) return doneCount++;
+                        loadData('spine/common/' + baseId + '_' + i + '.cysp', function(success, data) {
+                            generalAdditionAnimations[baseId][i] = sliceCyspAnimation(data);
+                            if (++doneCount == additionAnimations.length) loadClassAnimation();
+                        }, 'arraybuffer');
+                    });
+                    if (doneCount == additionAnimations.length) return loadClassAnimation();
+                }
+
+                function loadClassAnimation() {
+                    if (currentClassAnimData.type == currentClass)
+                        loadCharaSkillAnimation();
+                    else
+                        loadData('spine/common/' + getClass(currentClass) + '_COMMON_BATTLE.cysp', function(success, data) {
+                            currentClassAnimData = {
+                                type: currentClass,
+                                data: sliceCyspAnimation(data)
+                            }
+                            loadCharaSkillAnimation();
+                        }, 'arraybuffer');
+                }
+
+                function loadCharaSkillAnimation() {
+                    var baseUnitId = loadingSkeleton.id;
+                    baseUnitId -= baseUnitId % 100 - 1;
+                    if (currentCharaAnimData.id == baseUnitId)
+                        loadTexture();
+                    else
+                        loadData('spine/unit/' + baseUnitId + '_BATTLE.cysp', function(success, data) {
+                            if (!success || data === null) return loading = false;
+                            currentCharaAnimData = {
+                                id: baseUnitId,
+                                data: sliceCyspAnimation(data)
+                            }
+                            loadTexture();
+                        }, 'arraybuffer');
+                }
+
+                function loadTexture() {
+                    loadData('spine/unit/' + loadingSkeleton.id + '.atlas', function(success, atlasText) {
+                        loadData('spine/unit/' + loadingSkeleton.id + '.png', function(success, blob) {
+                            if (!success) return loading = false;
+                            var img = new Image();
+                            img.onload = function() {
+                                var created = !!window.skeleton.skeleton;
+                                if (created) {
+                                    window.skeleton.state.clearTracks();
+                                    window.skeleton.state.clearListeners();
+                                    gl.deleteTexture(currentTexture.texture)
+                                }
+
+                                var imgTexture = new spine.webgl.GLTexture(gl, img);
+                                URL.revokeObjectURL(img.src);
+                                atlas = new spine.TextureAtlas(atlasText, function(path) {
+                                    return imgTexture;
+                                });
+                                currentTexture = imgTexture;
+                                atlasLoader = new spine.AtlasAttachmentLoader(atlas);
+
+                                var baseId = loadingSkeleton.baseId;
+                                var additionAnimations = Object.values(generalAdditionAnimations[baseId]);
+
+                                var animationCount = 0;
+                                var classAnimCount = currentClassAnimData.data.count;
+                                animationCount += classAnimCount;
+                                var unitAnimCount = currentCharaAnimData.data.count;
+                                animationCount += unitAnimCount;
+                                additionAnimations.forEach(function(i) {
+                                    animationCount += i.count;
+                                })
+
+                                var newBuffSize = generalBattleSkeletonData[baseId].byteLength - 64 + 1 +
+                                    currentClassAnimData.data.data.byteLength +
+                                    currentCharaAnimData.data.data.byteLength;
+                                additionAnimations.forEach(function(i) {
+                                    newBuffSize += i.data.byteLength;
+                                })
+                                var newBuff = new Uint8Array(newBuffSize);
+                                var offset = 0;
+                                newBuff.set(new Uint8Array(generalBattleSkeletonData[baseId].slice(64)), 0);
+                                offset += generalBattleSkeletonData[baseId].byteLength - 64;
+                                newBuff[offset] = animationCount;
+                                offset++;
+                                newBuff.set(new Uint8Array(currentClassAnimData.data.data), offset);
+                                offset += currentClassAnimData.data.data.byteLength;
+                                newBuff.set(new Uint8Array(currentCharaAnimData.data.data), offset);
+                                offset += currentCharaAnimData.data.data.byteLength;
+                                additionAnimations.forEach(function(i) {
+                                    newBuff.set(new Uint8Array(i.data), offset);
+                                    offset += i.data.byteLength;
+                                })
+
+                                var skeletonBinary = new spine.SkeletonBinary(atlasLoader);
+                                var skeletonData = skeletonBinary.readSkeletonData(newBuff.buffer);
+                                var skeleton = new spine.Skeleton(skeletonData);
+                                skeleton.setSkinByName('default');
+                                var bounds = calculateBounds(skeleton);
+
+                                animationStateData = new spine.AnimationStateData(skeleton.data);
+                                var animationState = new spine.AnimationState(animationStateData);
+                                // animationState.setAnimation(0, getClass(currentClass) + '_idle', true);
+                                animationState.setAnimation(0, '000000_noWeapon_idle', true);
+                                animationState.addListener({
+                                    complete: function tick(track) {
+                                        if (animationQueue.length) {
+                                            var nextAnim = animationQueue.shift();
+                                            if (nextAnim == 'stop') return;
+                                            if (nextAnim == 'hold') return setTimeout(tick, 1e3);
+                                            if (nextAnim.substr(0, 1) != '1') nextAnim = getClass(currentClassAnimData.type) + '_' + nextAnim;
+                                            if (/^\d{2}_000000/.test(nextAnim)) nextAnim = nextAnim.replace(getClass(currentClassAnimData.type) + '_', "");
+                                            console.log(nextAnim);
+                                            animationState.setAnimation(0, nextAnim, !animationQueue.length);
+                                        }
+                                    },
+                                });
+
+                                window.skeleton = {
+                                    skeleton: skeleton,
+                                    state: animationState,
+                                    bounds: bounds,
+                                    premultipliedAlpha: true
+                                }
+                                loading = false;
+                                if (!created) {
+                                    requestAnimationFrame(render);
+                                }
+                                activeSkeleton = loadingSkeleton.id;
+                            }
+                            img.src = URL.createObjectURL(blob);
+                        }, 'blob');
+                    })
+                }
+
+                function calculateBounds(skeleton) {
+                    skeleton.setToSetupPose();
+                    skeleton.updateWorldTransform();
+                    var offset = new spine.Vector2();
+                    var size = new spine.Vector2();
+                    skeleton.getBounds(offset, size, []);
+                    offset.y = 0
+                    return {
+                        offset: offset,
+                        size: size
+                    };
+                }
+
+                function render() {
+                    var now = Date.now() / 1000;
+                    var delta = now - lastFrameTime;
+                    lastFrameTime = now;
+                    delta *= speedFactor;
+
+                    resize();
+
+                    gl.clearColor(0, 0, 0, 0);
+                    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+                    var state = window.skeleton.state;
+                    var skeleton = window.skeleton.skeleton;
+                    var bounds = window.skeleton.bounds;
+                    var premultipliedAlpha = window.skeleton.premultipliedAlpha;
+                    state.update(delta);
+                    state.apply(skeleton);
+                    skeleton.updateWorldTransform();
+
+                    shader.bind();
+                    shader.setUniformi(spine.webgl.Shader.SAMPLER, 0);
+                    shader.setUniform4x4f(spine.webgl.Shader.MVP_MATRIX, mvp.values);
+
+                    batcher.begin(shader);
+                    skeletonRenderer.premultipliedAlpha = premultipliedAlpha;
+                    skeletonRenderer.draw(batcher, skeleton);
+                    batcher.end();
+
+                    shader.unbind();
+
+                    requestAnimationFrame(render);
+                }
+
+                function resize() {
+                    var useBig = screen.width * window.devicePixelRatio > 1280;
+                    canvas.width = canvas.clientWidth;
+                    canvas.height = canvas.clientHeight;
+                    var bounds = window.skeleton.bounds;
+
+                    var centerX = bounds.offset.x + bounds.size.x / 2;
+                    var centerY = bounds.offset.y + bounds.size.y / 2;
+
+                    mvp.ortho2d(-250, -50, canvas.width * 2, canvas.height * 2);
+                    gl.viewport(0, 0, canvas.width, canvas.height);
+                }
+
+                (function() {
+                    init();
+                })();
+
+                function runAnimation(queue) {
+                    var animationState = skeleton.state,
+                        forceNoLoop = false;
+                    animationQueue = queue.split(',');
+                    if (animationQueue[0] == 'multi_standBy') {
+                        animationQueue.push('multi_idle_standBy');
+                    } else if ([
+                            'multi_idle_standBy', 'multi_idle_noWeapon', 'idle', 'walk', 'run', 'run_gamestart', '000000_balloon_flying_loop', '000000_noWeapon_idle'
+                        ].indexOf(animationQueue[animationQueue.length - 1]) == -1) {
+                        animationQueue.push('idle');
+                    }
+                    console.log(animationQueue);
+                    var nextAnim = animationQueue.shift();
+                    console.log(nextAnim);
+                    if (!/^\d{6}/.test(nextAnim)) nextAnim = getClass(currentClassAnimData.type) + '_' + nextAnim;
+                    animationState.setAnimation(0, nextAnim, !animationQueue.length && !forceNoLoop);
+                }
+            </script>
+        </div>
+        <div id="body-1" style="display: none">
+            <h1>WMProject1217</h1>
+            <h3>Studios</h3>
+        </div>
+        <footer>
+            <p>Copyright &copy; 2021 <a href="http://studio.wmproject1217.wm/">WMProject1217 Studios</a>.</p>
+            <div id="footer-down">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 284.929 284.929" xml:space="preserve" onclick="if (!window.__cfRLUnblockHandlers) return false; toNext()"
+                    oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; showMenu()" id="footer-down-button" data-cf-modified-5791e6906e28f526dae007cc-="">
+					<g>
+						<g>
+							<path d="M135.899,167.877c1.902,1.902,4.093,2.851,6.567,2.851s4.661-0.948,6.562-2.851L282.082,34.829    c1.902-1.903,2.847-4.093,2.847-6.567s-0.951-4.665-2.847-6.567L267.808,7.417c-1.902-1.903-4.093-2.853-6.57-2.853    c-2.471,0-4.661,0.95-6.563,2.853L142.466,119.622L30.262,7.417c-1.903-1.903-4.093-2.853-6.567-2.853    c-2.475,0-4.665,0.95-6.567,2.853L2.856,21.695C0.95,23.597,0,25.784,0,28.262c0,2.478,0.953,4.665,2.856,6.567L135.899,167.877z"/>
+							<path d="M267.808,117.053c-1.902-1.903-4.093-2.853-6.57-2.853c-2.471,0-4.661,0.95-6.563,2.853L142.466,229.257L30.262,117.05    c-1.903-1.903-4.093-2.853-6.567-2.853c-2.475,0-4.665,0.95-6.567,2.853L2.856,131.327C0.95,133.23,0,135.42,0,137.893    c0,2.474,0.953,4.665,2.856,6.57l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854l133.054-133.046    c1.902-1.903,2.847-4.093,2.847-6.565c0-2.474-0.951-4.661-2.847-6.567L267.808,117.053z"/>
+						</g>
+					</g>
+				</svg>
+            </div>
+            <canvas id="canvas"></canvas>
+            <audio id="audio"></audio>
+        </footer>
+        <header ondragstart="if (!window.__cfRLUnblockHandlers) return false; return false;" data-cf-modified-5791e6906e28f526dae007cc-="">
+            <a href="http://studio.wmproject1217.wm/">首页</a>
+            <a href="http://studio.wmproject1217.wm/about/">关于</a>
+            <a href="http://studio.wmproject1217.wm/update/">历史</a>
+        </header>
+        <div id="body-2">
+            <div class="fade-in">
+                <h1>简介</h1>
+                <p>本网站参照 HTML5 代码规范进行编写，不支持旧式浏览器。若您的浏览器不支持 HTML5，一般会在主页弹出窗口提示。如要访问该网页，请选择更新浏览器。</p>
+                <p>本域名提供商为 <a href="http://cloud.net.wm/">本地服务器</a>，空间提供商为 <a href="http://cloud.net.wm/">本地服务器</a>。</p>
+                <p>本网站及其所有隶属网站都遵循此<a href="http://blog.net.wm/index.php/terms-of-use.html">用户条款</a>与<a href="http://blog.net.wm/index.php/privacy-policy.html">隐私政策</a>。</p>
+            </div>
+            <div class="fade-in">
+                <h1>开发者</h1>
+                <div class="developers">
+                    <img src="./avatar/user.png">
+                    <h3>WMProject1217</h3>
+                    <p>WMProject1217 Studios 站长。</p>
+                </div>
+            </div>
+            <div class="fade-in">
+                <h1>联系我们</h1>
+                <p>联系不到（</p>
+            </div>
+        </div>
+        <div id="body-3"></div>
+        <div id="body-4">
+            <div id="body-4-project" class="fade-in">
+                <h1>项目列表</h1>
+                <div class="body-4-project-card upgrade" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://wemakeli.net.wm/')" data-cf-modified-5791e6906e28f526dae007cc-="">
+                    <img src="./src/img/wemakeli.ico">
+                    <div>
+                        <h3>Wemakeli</h3>
+                        <p>开发中的开源弹幕视频网站工程。</p>
+                        <p class="body-4-project-card-link"><a href="http://wemakeli.net.wm/">http://wemakeli.net.wm</a></p>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    </div>
+                </div>
+                <div class="body-4-project-card upgrade" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://bot.wmproject1217.wm/')" data-cf-modified-5791e6906e28f526dae007cc-="">
+                    <img src="./src/img/wmbot.ico">
+                    <div>
+                        <h3>WMBot</h3>
+                        <p>开发中的开源聊天机器人，现在可用于单机，QQ，bilibili，Discord。</p><!--，虽然目前还有很多特性，而且有很多人不希望此机器人开源-->
+                        <p class="body-4-project-card-link"><a href="http://bot.wmproject1217.wm/">http://bot.wmproject1217.wm/</a></p>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    </div>
+                </div>
+                <div class="body-4-project-card upgrade" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://pixiv.wmproject1217.wm/')" data-cf-modified-5791e6906e28f526dae007cc-="">
+                    <img src="./src/img/wmscript.jpg">
+                    <div>
+                        <h3>WMScript Launcher</h3>
+                        <p>开发中的基于多语言跨平台WMScript脚本解析。</p>
+                        <p class="body-4-project-card-link"><a href="http://pixiv.wmproject1217.wm/">http://pixiv.wmproject1217.wm/</a></p>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    </div>
+                </div>
+                <div>
+                    <h3>WMTalk 在线聊天室</h3>
+                    <p>使用 JavaScript 轮询进行多端对话，即将支持图片传输。</p>
+                    <p><a href="http://wemakeli.net.wm/talk/2/">http://wemakeli.net.wm/talk/2/</a></p>
+                </div>
+                <div>
+					<h3>WMProject1217 Studios Typecho Part</h3>
+					<p><a href="http://blog.net.wm/">http://blog.net.wm/</a></p>
+                </div>
+                <div>
+					<h3>此处应该有文本</h3>
+					<p><a href="">但是我们的文案并没有出现，而且你看一大堆空白就知道我们的垃圾设计师也不会设计</a></p>
+				</div>
+            </div>
+        </div>
+    </div>
+    <script src="./cloudflare/rocket-loader.min.js" data-cf-settings="5791e6906e28f526dae007cc-|49" defer=""></script>
+</body>
+<script type="5791e6906e28f526dae007cc-text/javascript">
+    window.onload = function() {
+        $("#background").animate({
+            "opacity": "1"
+        }, 1000);
+    }
+    $(function() {
+        checkScroll();
+        checkFadeIn();
+        var nice = $("html").scroll();
+        $("#body-1>h1").css({
+            "margin-left": "-50px"
+        });
+        $("#body-1>h3").css({
+            "margin-right": "-50px"
+        });
+        $("#body-1").fadeIn(1000);
+        $("#body-1>h1").animate({
+            "margin-left": "0"
+        }, 1000);
+        $("#body-1>h3").animate({
+            "margin-right": "0"
+        }, 1000);
+        $("body").mousemove(function(e) {
+            if ("ontouchstart" in window == true) {
+                return;
+            }
+            var x = window.innerWidth / 2 - e.clientX
+            var y = window.innerHeight / 2 - e.clientY
+            $("#background").css("background", "url(src/img/background-3.jpg) calc(50% + " + (x / 50) + "px) calc(50% + " + (y / 50) + "px) no-repeat")
+        })
+        window.onscroll = function() {
+            checkScroll();
+            checkFadeIn();
+        }
+        c = window.innerHeight;
+        window.onresize = function() {
+            c = window.innerHeight;
+            checkScroll();
+        }
+        window.onclick = function(e) {
+            var e = e || window.event;
+            if (e.button == "0") {
+                $("#footer-down-menu").slideUp(100);
+            }
+        }
+    })
+
+    function checkScroll() {
+        var a = window.innerHeight + $(document).scrollTop() - 140;
+        var b = $(document).scrollTop() / window.innerHeight + 0.3;
+        var c = 1 - $(document).scrollTop() / window.innerHeight;
+        var d = window.innerHeight - $(document).scrollTop();
+        if (b < 0.3) b = 0.3;
+        $("#body-1").css("top", a / 2 + "px");
+        $("#body-1").css("opacity", c);
+        $("footer").css("background", "rgba(255,255,255," + b + ")");
+        if (b > 0.7) {
+            $("footer").css("color", "gray");
+            $("#footer-down>svg").css("fill", "gray");
+            $("footer>p").css("text-shadow", "none");
+        } else {
+            $("footer").css("color", "white");
+            $("#footer-down>svg").css("fill", "white");
+            $("footer>p").css("text-shadow", "0 0 1px #000");
+        }
+        if ($(document).scrollTop() > window.innerHeight) {
+            $("header").css("position", "fixed");
+            $("header").css("top", "0");
+        } else {
+            $("header").css("position", "absolute");
+            $("header").css("top", "100%");
+        }
+        if ($(document).scrollTop() > window.innerHeight - 90) {
+            $("#footer-down-menu").css("display", "none");
+            $("#footer-down").css("position", "fixed");
+            $("#footer-down").css("transform", "rotate(" + (180 - (d / 90 * 180)) + "deg)");
+            if ($(document).scrollTop() > window.innerHeight - 25) {
+                if (d > 0) {
+                    $("#footer-down").css("top", d + 10 + "px");
+                } else {
+                    $("#footer-down").css("top", "10px");
+                    $("#footer-down").css("transform", "rotate(180deg)");
+                    $("#footer-down>svg").attr("onclick", "toTop()");
+                }
+            }
+        } else {
+            $("#footer-down").css("position", "absolute");
+            $("#footer-down").css("top", "35px");
+            $("#footer-down").css("transform", "rotate(0deg)");
+            $("#footer-down>svg").attr("onclick", "toNext()");
+        }
+    }
+
+    function checkFadeIn() {
+        $.fn.visible = function(partial) {
+            var viewTop = $(window).scrollTop(),
+                viewBottom = viewTop + $(window).height(),
+                _top = $(this).offset().top,
+                _bottom = _top + $(this).height(),
+                compareTop = partial === true ? _bottom : _top,
+                compareBottom = partial === true ? _top : _bottom;
+            return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+        }
+        $(".fade-in").each(function(i, el) {
+            if ($(el).visible(true)) $(el).addClass("come-in");
+        })
+    }
+    var touchY = 0;
+    var longClick = 0;
+    $("#footer-down-button").on({
+        touchstart: function(e) {
+            longClick = 0;
+            timeOutEvent = setTimeout(function() {
+                if ($("#footer-down-menu").css("display") == "none") $("#footer-down-menu").slideDown(100);
+                else $("#footer-down-menu").slideUp(100);
+                longClick = 1;
+            }, 500);
+            var touch = e.touches[0];
+            touchY = touch.clientY;
+        },
+        touchmove: function() {
+            clearTimeout(timeOutEvent);
+            timeOutEvent = 0;
+            var touch = e.touches[0]
+            if (Math.abs(touch.clientY - touchY) < 10) {
+                e.preventDefault();
+            }
+        },
+        touchend: function(e) {
+            clearTimeout(timeOutEvent);
+        }
+    });
+
+    function toNext() {
+        $('body,html').animate({
+            scrollTop: c
+        }, 1000);
+        return false;
+    }
+
+    function toTop() {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 1000);
+        return false;
+    }
+
+    function showMenu() {
+        var e = window.event;
+        e.preventDefault();
+        if (e.button != "0") {
+            if ($("#footer-down-menu").css("display") == "none") $("#footer-down-menu").slideDown(100);
+            else $("#footer-down-menu").slideUp(100);
+        }
+    }
+
+    function audioVisualizer() {
+        $("#start-audio").css("display", "none");
+        $("#start-audio").attr("onclick", "startAudio()");
+        $("#pause-audio").css("display", "block");
+        $("#change-audio").css("display", "block");
+        var title = document.getElementById("body-1");
+        var audio = document.getElementById("audio");
+        audio.src = "http://studio.wmproject1217.wm/audio/music-" + parseInt(Math.random() * 74 + 1) + ".mp3";
+        audio.load();
+        audio.play();
+        var context = new(window.AudioContext || window.webkitAudioContext)() || false;
+        if (!context) alert("浏览器不支持音频可视化");
+        try {
+            audio.addEventListener('ended', function() {
+                $("#start-audio").css("display", "block");
+                $("#pause-audio").css("display", "none");
+            }, false);
+            var src = context.createMediaElementSource(audio);
+            var analyser = context.createAnalyser();
+
+            var canvas = document.getElementById("canvas");
+            canvas.width = window.innerWidth;
+            canvas.height = 200;
+            var ctx = canvas.getContext("2d");
+
+            src.connect(analyser);
+            analyser.connect(context.destination);
+
+            analyser.fftSize = 2048;
+
+            var bufferLength = analyser.frequencyBinCount;
+
+            var freqDataArray = new Uint8Array(bufferLength);
+
+            var WIDTH = canvas.width;
+            var HEIGHT = canvas.height;
+
+            var barWidth = 20;
+            var barHeight;
+            var x = 0;
+
+            window.addEventListener("resize", function() {
+                canvas.width = window.innerWidth;
+                WIDTH = canvas.width;
+            })
+            if (analyser.getFloatTimeDomainData) {
+                var dataArray = new Float32Array(analyser.fftSize);
+            } else {
+                var dataArray = new Uint8Array(analyser.fftSize);
+            }
+
+            function renderFrame() {
+                requestAnimationFrame(renderFrame);
+                if (analyser.getFloatTimeDomainData) {
+                    analyser.getFloatTimeDomainData(dataArray);
+                } else {
+                    analyser.getByteTimeDomainData(dataArray);
+                }
+                var sampleAverage = 0;
+                if (analyser.getFloatTimeDomainData) {
+                    for (var i = 0; i < dataArray.length; i++) {
+                        sampleAverage += Math.abs(dataArray[i]);
+                    }
+                } else {
+                    for (var i = 0; i < dataArray.length; i++) {
+                        sampleAverage += Math.abs(dataArray[i] - 128) / 128;
+                    }
+                }
+                sampleAverage /= dataArray.length;
+                var shadow = 2 * (Math.exp(sampleAverage) - 1);
+                var shadowInner = 2 * (Math.exp(sampleAverage / 2) - 1);
+                if (shadowInner == 0) title.style['text-shadow'] = "0px 1px 3px white, 0px 1px 3px white";
+                else title.style['text-shadow'] = "0px 1px " + shadow + "em white, 0px 1px " + shadowInner + "em white";
+                x = 0;
+                analyser.getByteFrequencyData(freqDataArray);
+                ctx.clearRect(0, 0, WIDTH, HEIGHT);
+                for (var i = 0; i < bufferLength; i++) {
+                    barHeight = freqDataArray[i];
+                    ctx.fillStyle = "white";
+                    ctx.fillRect(x, 300 - barHeight * 1, barWidth, barHeight * 1);
+
+                    x += barWidth + 5;
+                }
+            }
+            renderFrame();
+        } catch (e) {
+            //
+        }
+    };
+
+    function startAudio() {
+        $("#start-audio").css("display", "none");
+        $("#pause-audio").css("display", "block");
+        $("#change-audio").css("display", "block");
+        document.getElementById("audio").play();
+    }
+
+    function pauseAudio() {
+        $("#start-audio").css("display", "block");
+        $("#pause-audio").css("display", "none");
+        document.getElementById("audio").pause();
+    }
+
+    function changeAudio() {
+        document.getElementById("audio").pause();
+        audioVisualizer();
+    }
+</script>

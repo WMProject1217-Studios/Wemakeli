@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WAITING IN LINE 3D</title>
+    <META NAME="keywords" CONTENT="rajeev basu, jeeves basu, waiting game, waiting in line 3d, waiting in line 3d game, wil3d">
+    <META NAME="description" CONTENT="The original first person shooter where you wait in line.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+    <meta property="fb:app_id" content="244818892341482" />
+    <meta property="og:title" content="Waiting in Line 3D" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.WaitingInLine3D.com" />
+    <meta property="og:image" content="http://www.rajeevbasu.com/projects/wil3d/wil3d_fbimage.jpg" />
+    <meta property="og:site_name" content="Waiting In Line 3D" />
+    <meta property="og:description" content="Waiting in Line 3D is the exciting new music videogame for ManCub's, 'Friends Listen'. Directed by Rajeev Basu." />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-45995416-1']);
+        _gaq.push(['_trackPageview']);
+
+        /*(function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();*/
+    </script>
+    <script type="text/javascript" src="soundmanager2-nodebug-jsmin.js"></script>
+    <script type="text/javascript">
+        /*window.twttr = (function(d, s, id) {
+            var t, js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            return window.twttr || (t = {
+                _e: [],
+                ready: function(f) {
+                    t._e.push(f)
+                }
+            });
+        }(document, "script", "twitter-wjs"));*/
+
+        (function() {
+            if (window.__twitterIntentHandler) return;
+            var windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes',
+                width = 550,
+                height = 420,
+                winHeight = screen.height,
+                winWidth = screen.width;
+
+            window.handleIntent = function(time) {
+                var left, top,
+                    tweet_text = 'I waited ' + time + ' and scored ' + (score || 0) + ' points! How long will you wait? Play the exciting new game WaitingInLine3D.com';
+
+                left = Math.round((winWidth / 2) - (width / 2));
+                top = 0;
+
+                if (winHeight > height) {
+                    top = Math.round((winHeight / 2) - (height / 2));
+                }
+
+                window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet_text), 'intent', windowOptions + ',width=' + width + ',height=' + height + ',left=' + left + ',top=' + top);
+            };
+
+            window.__twitterIntentHandler = true;
+        }());
+    </script>
+</head>
+
+<body>
+
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '244818892341482', // App ID
+                channelUrl: '//www.waitinginline3d.com/channel.html', // Channel File
+                status: true, // check login status
+                cookie: true, // enable cookies to allow the server to access the session
+                xfbml: true // parse XFBML
+            });
+        };
+
+        /*(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=224551260934468";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));*/
+    </script>
+
+    <div id="gamelayout">
+        <img id="loader" />
+        <canvas id="canvas"></canvas>
+
+        <div id="footer" class="loading">
+            <hr/>
+
+            <FONT id="footertext" face="times" color="gray" size="+1">
+                &#9835; A music videogame ft. <a href="https://www.facebook.com/Mancub303" target="_blank">ManCub's</a> "Friends Listen"
+            </FONT>
+
+            <!--<div style="display: inline-block; width: 100px; margin-left: 40px; padding-top: 4px;">
+			<a href="https://twitter.com/share"
+			   class="twitter-share-button"
+			   data-url="http://www.urltogohere.com"
+			   data-text="text to go here." data-via="basuralondon">Tweet</a>
+			<script>!function ( d, s, id ) {
+				var js, fjs = d.getElementsByTagName( s )[0];
+				if ( !d.getElementById( id ) ) {
+					js = d.createElement( s );
+					js.id = id;
+					js.src = "//platform.twitter.com/widgets.js";
+					fjs.parentNode.insertBefore( js, fjs );
+				}
+			}( document, "script", "twitter-wjs" );</script>
+		</div>
+
+		<div style="display: inline-block; width: 110px; text-align: left; margin-left: 10px; padding-top: 4px;">
+			<div class="fb-like"
+				 data-href="http://www.statusupdatethemovie.com"
+				 data-send="false" data-layout="button_count"
+				 data-width="80" data-show-faces="false"
+				 align="left"></div>
+		</div>
+
+            <hr/>
+
+            <br/>
+
+            <font face="times" color="gray" size="-1">
+                Created by <a href="http://www.rajeevbasu.com" target="_blank">Rajeev Basu</a> &#169; 1991
+                <img src="images/counter.gif"><img src="images/nl.gif"><img src="images/iel.gif">
+            </font>
+        </div>
+    </div>-->
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+
+</html>

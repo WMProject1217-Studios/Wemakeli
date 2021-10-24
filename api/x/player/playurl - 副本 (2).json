@@ -1,0 +1,22 @@
+﻿{
+	"from": "local",
+	"result": "suee",
+	"quality": 6,
+	"format": "mp4",
+	"timelength": 268633,
+	"accept_format": "mp4",
+	"accept_quality": [6],
+	"video_codecid": 7,
+	"video_project": false,
+	"seek_param": "start",
+	"seek_type": "second",
+	"durl": [{
+		"order": 1,
+		"length": 268633,
+		"size": 8025970,
+		"url": "./video.mp4"
+	}],
+	"img": "https:\/\/i1.hdslb.com\/bfs\/archive\/70492d7b0760a9e38c8573b421c3dc8128232b09.jpg",
+	"cid": "./danmaku.xml",
+	"fromview": "vupload"
+}

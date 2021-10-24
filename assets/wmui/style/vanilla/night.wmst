@@ -1,0 +1,5 @@
+﻿##WMProject1217 Application System Config File(UTF-8)
+##Version 0.87.29.2251 UTF-8
+!#RT_css=##_Wemakeli_Web_Root_##/assets/wmui/style/##_WMUI_StyleFolder##/night.css
+!#RT_js=##_Wemakeli_Web_Root_##/assets/wmui/style/##_WMUI_StyleFolder##/night.js
+!#RT_ver=0.8

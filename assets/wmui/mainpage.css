@@ -1,0 +1,86 @@
+.WMUI-Group-Warp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*flex-wrap: wrap;*/
+}
+
+.wmuishowwrapla {
+    position: relative;
+    left: -5px;
+}
+
+.wmuishowwraplb {
+    position: relative;
+}
+
+.wmuishowwraplc {
+    position: relative;
+    left: 5px;
+}
+
+.wmuishowercc{
+    position: relative;
+    top: -4px;
+    left: 5px;
+    width: 170px;
+    height: 96px;
+}
+
+.wmuishowerc {
+    position: absolute;
+    width: 170px;
+    height: 96px;
+}
+
+.wmuishowerctop {
+    position: absolute;
+    z-index: 2700;
+    width: 170px;
+    height: 96px;
+}
+
+.wmuishowerctitle {
+    position: absolute;
+    z-index: 2701;
+    color: #EE0000;
+    font-size: 16px;
+    margin-top: 46px;
+    width: 170px;
+    height: 37px;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.wmuishowerctitlel {
+    position: absolute;
+    word-wrap: break-word;
+    z-index: 2701;
+    color: #EE0000;
+    font-size: 16px;
+    margin-top: 0px;
+    width: 170px;
+    height: 37px;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.wmuishowercplaycount {
+    position: absolute;
+    z-index: 2701;
+    color: #EEEE00;
+    font-size: 16px;
+    margin-top: 62px;
+    width: 170px;
+    height: 24px;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.wmuishowercupmaster {
+    position: absolute;
+    z-index: 2701;
+    color: #66CCFF;
+    font-size: 16px;
+    margin-top: 76px;
+    width: 170px;
+    height: 24px;
+    text-shadow: 1px 1px 3px #000000;
+}

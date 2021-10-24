@@ -1,0 +1,36 @@
+﻿{
+    "code": 0,
+    "message": "0",
+    "ttl": 1,
+    "data": {
+        "from": "local",
+        "result": "suee",
+        "message": "",
+        "quality": 112,
+        "format": "hdflv2",
+        "timelength": 265001,
+        "accept_format": "hdflv2,flv,flv720,flv480,mp4",
+        "accept_description": [
+            "高清 720P"
+        ],
+        "accept_quality": [
+            64
+        ],
+        "video_codecid": 7,
+        "seek_param": "start",
+        "seek_type": "offset",
+        "durl": [
+            {
+                "order": 1,
+                "length": 265001,
+                "size": 45339007,
+                "ahead": "",
+                "vhead": "",
+                "url": "./video.flv",
+                "backup_url": [
+                    "./video.flv"
+                ]
+            }
+        ]
+    }
+}

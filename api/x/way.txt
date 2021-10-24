@@ -1,0 +1,5 @@
+<iframe src="//player.bilibili.com/player.html?aid=5656017&bvid=BV1as411C7or&cid=9185061&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+https://api.bilibili.com/x/player/playurl?cid=9185061&qn=64&type=&otype=json&fourk=1&avid=5656017&fnver=0&fnval=80&session=e5086af5205a4f5b95f00a99c16e5627
+
+https://api.bilibili.com/x/v2/dm/web/seg.so?oid=9185061&type=1&segment_index=1

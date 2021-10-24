@@ -1,0 +1,147 @@
+html,
+body {
+    overflow: hidden;
+}
+
+a:link {
+    /* Applies to all unvisited links */
+    text-decoration: none;
+    color: yellow;
+}
+
+a:visited {
+    /* Applies to all visited links */
+    text-decoration: none;
+    color: yellow;
+}
+
+a:hover {
+    /* Applies to links under the pointer */
+    text-decoration: none;
+    color: red;
+}
+
+a:active {
+    /* Applies to activated links */
+    text-decoration: none;
+    color: yellow;
+}
+
+table.sample {
+    border-width: 5px;
+    border-spacing: 2px;
+    border-style: solid;
+    border-color: blue;
+    border-collapse: separate;
+}
+
+table.sample th {
+    border-width: 0px;
+    padding: 1px;
+    border-style: inset;
+    border-color: gray;
+}
+
+table.sample td {
+    border-width: 0px;
+    padding: 8px;
+    border-style: inset;
+    border-color: gray;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background-color: #000000;
+    margin: 40px 0;
+    overflow: hidden;
+}
+
+#gamelayout {
+    margin: 0 auto;
+    text-align: center;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+canvas:-webkit-full-screen {
+    left: auto;
+    top: auto;
+    -webkit-transform: scale( .8, 1);
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+canvas:-moz-full-screen {
+    left: auto;
+    top: auto;
+    -webkit-transform: scale( .8, 1);
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+canvas:-ms-full-screen {
+    left: auto;
+    top: auto;
+    -webkit-transform: scale( .8, 1);
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+canvas:full-screen {
+    left: auto;
+    top: auto;
+    -webkit-transform: scale( .8, 1);
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+#loader {
+    display: none;
+}
+
+#footer>* {
+    vertical-align: middle;
+}
+
+#footer.loading hr {
+    opacity: 0;
+}
+
+/*@media (max-height: 800px) {
+    #footertext {
+        display: block;
+    }
+}*/
+
+@media (max-device-width: 767px),
+(max-device-height: 767px) {
+    body {
+        margin: 0;
+    }
+    #footer {
+        display: none;
+    }
+}
+
+@media (max-width: 430px),
+(max-height: 430px) {
+    body {
+        margin: 0;
+    }
+    #footer {
+        display: none;
+    }
+}

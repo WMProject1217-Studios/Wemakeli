@@ -1,0 +1,7 @@
+﻿body,td,th {font-family: 'Microsoft Yahei UI';font-size: 12pt;color: #222;}
+body {margin-left: 0px;margin-top: 0px;margin-right: 0px;margin-bottom: 0px;background-color: #F5E6C1;line-height:25px;}
+.login{line-height:25px;}
+a:link {color: #222;text-decoration: none;}
+a:visited {text-decoration: none;color: #222;}
+a:hover {text-decoration: underline;color: #FF0000;}
+a:active {text-decoration: none;color: #999999;}

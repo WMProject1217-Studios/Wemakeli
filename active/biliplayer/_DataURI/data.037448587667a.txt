@@ -1,0 +1,1 @@
+chrome-extension://likjdahhpdjmdochdopafhpkalpngfmp/model/colorpicker/js/colorpicker.js
