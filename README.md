@@ -25,7 +25,7 @@ Because the author is a pigeons so this project will update slow (
 
 Wemakeli ，基于PHP，由 WMProject1217 开发。Wemakeli 及其官方网站版权均归 WMProject1217 所有。
 
-Wemakeli 是非商业许可性质的开源弹幕视频网源码，除 https://github.com/wmproject1217/wemakeli 库提供的赞助方式外，任何以 Wemakeli 或 WMProject1217 为名义的赞助等均不存在。
+Wemakeli 是非商业许可性质的开源弹幕视频网源码，任何以 Wemakeli 或 WMProject1217 为名义的赞助等均不存在。
 
 如果再混合、转换或者基于本作品进行创作，必须基于与原先许可协议相同的许可协议，分发其贡献的作品。
 
@@ -35,8 +35,8 @@ WMProject1217 保留对本条款作出不定时修改的权利。
 
 WMProject1217 对本页面内容拥有最终解释权。
 
-本用户条款最后于 2021/02/13 13:09:28 更新。
+本用户条款最后于 2021/10/24 13:36:11 更新。
 
 赞助
 
-当前没有赞助方法，不要相信网络上的任何以 Wemakeli 或 WMProject1217 为名义的赞助。
+不要相信网络上的任何以 Wemakeli 或 WMProject1217 为名义的赞助。
